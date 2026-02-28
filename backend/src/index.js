@@ -14,7 +14,7 @@ const app = express();
 // Middleware
 app.use(express.json());
 app.use(cors({
-  origin: [process.env.CUSTOMER_APP_URL, process.env.ADMIN_APP_URL],
+  origin: true, // Allow all origins for the MVP/Beta phase
   credentials: true
 }));
 
