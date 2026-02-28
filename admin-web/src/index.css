@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-bgDark text-white antialiased selection:bg-primary/30 selection:text-primary-hover;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary hover:bg-primary-hover text-white px-6 py-3 rounded-xl font-bold transition-all shadow-lg hover:shadow-primary/20 hover:-translate-y-0.5 active:translate-y-0;
+  }
+
+  .glass-card {
+    @apply bg-bgDark-paper/60 backdrop-blur-md border border-white/10 rounded-2xl shadow-xl;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 rounded-xl bg-bgDark border border-white/10 focus:ring-2 focus:ring-primary/50 focus:border-primary outline-none transition-all text-white placeholder-gray-500;
+  }
+}
+
+/* Custom Scrollbar for Admin Panel */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
